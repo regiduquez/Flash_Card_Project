@@ -25,11 +25,7 @@ def generate_word():
     current_card = random.choice(french_english_dict)
     canvas.itemconfig(canvas_language, text="French")
     canvas.itemconfig(canvas_word, text=current_card["French"])
-    # random_num = random.randint(0, 101)
-    # french_word = french_english_dict[random_num]['French']
-    # english_word = french_english_dict[random_num]['English']
-    # word_label.config(text=french_word)
-    # print(english_word)
+
 
 
 # LABEL
