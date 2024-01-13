@@ -21,8 +21,7 @@ def generate_word():
     canvas.itemconfig(canvas_language, text="French", fill="black")
     canvas.itemconfig(canvas_word, text=current_card["French"], fill="black")
     canvas.itemconfig(canvas_img, image=front_card)
-    window.after(3000, flip_card)
-
+    flip_timer = window.after(3000, flip_card)
 
 
 def flip_card():
@@ -67,7 +66,7 @@ flip_timer = window.after(5000, generate_word)
 # BUTTONS
 wrong_img = tk.PhotoImage(file="images/wrong.png")
 wrong_button = tk.Button(image=wrong_img, highlightthickness=0, border=0.0,
-                         activebackground=BACKGROUND_COLOR, command=generate_word)
+                         activebackground=BACKGROUND_COLOR, command=generate_word,)
 wrong_button.grid(column=0, row=1)
 
 
