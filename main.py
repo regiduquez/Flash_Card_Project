@@ -30,10 +30,8 @@ def flip_card():
     canvas.itemconfig(canvas_word, text=current_card["English"], fill="white")
 
 def update_dict():
-    card_index = dictionary.index(current_card)
-    dictionary.remove(dictionary[card_index])
-    words_to_learn = dictionary
-    df_words = pandas.DataFrame(words_to_learn)
+    dictionary.remove(current_card)
+    df_words = pandas.DataFrame(dictionary)
     df_words.to_csv("data/words_to_learn.csv", index=False)
 
 
